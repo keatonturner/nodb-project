@@ -59,7 +59,7 @@ this.setState({search: e.target.value})
             <input type="text" value={this.state.search} onChange={this.updateSearch.bind(this)} placeholder="Search Player" /> 
             <button onClick={() => this.updateSearch()}> onSearch</button>
             </section>
-            <button onClick={() => this.getPlayers()}>Get Players</button>
+            <button className="get-players"onClick={() => this.getPlayers()}>Get Players</button>
             <h2>Top 20 Players:</h2>
              { GetPlayers }
             </div>

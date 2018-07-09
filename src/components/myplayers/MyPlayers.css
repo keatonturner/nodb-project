@@ -4,3 +4,12 @@
    background-color: white;
    border: 3px solid black;
 }
+button {
+    background-color: red;
+    font-size: 10px;
+    padding: 6px;
+}
+input {
+    border: 1px solid red;
+    padding: 5px
+}
