@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import './Players.css'
+import Player from './player/Player';
 
 
 
@@ -39,11 +40,7 @@ this.setState({search: e.target.value})
            return e.name.toLowerCase().includes(this.state.search.toLowerCase());
        }).map((e) => {
            return(
-            <div key={e.id}>
-            <p>Name: {e.name}</p> 
-            <p>Team: {e.team}</p>
-            <button onClick={() => this.props.addToMyPlayers(e.id, e.name, e.team)}>Add To My Players</button>
-            </div>
+            <Player   id={e.id} Name={e.name} Team={e.team} addPlayers={this.props.addToMyPlayers}/>
            )
        })
      
@@ -60,7 +57,7 @@ this.setState({search: e.target.value})
             <button onClick={() => this.updateSearch()}> onSearch</button>
             </section>
             <button className="get-players"onClick={() => this.getPlayers()}>Get Players</button>
-            <h2>Top 20 Players:</h2>
+            <h2>Players:</h2>
              { GetPlayers }
             </div>
             

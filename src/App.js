@@ -5,6 +5,7 @@ import axios from 'axios';
 import Header from './components/Header';
 import Players from './components/players/Players';
 import MyPlayers from './components/myplayers/MyPlayers';
+import Status from './components/Status';
 
 class App extends Component {
   constructor(){
@@ -43,8 +44,9 @@ addToMyPlayers(id, Name, Team){
       
 
       <main className="allPlayers">
-      <section >
-         
+      <Status />
+      <section >  
+      
           <Players playersToDisplay={this.state.playerList} addToMyPlayers={this.addToMyPlayers}  />
           </section>
 

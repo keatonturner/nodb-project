@@ -47,7 +47,7 @@ res.status(200).send(myPlayerList)
     playerList.splice(playersIndex, 1)
 
     myPlayerList.push({id, Name, Team})
-    console.log(myPlayerList)
+    
     res.status(200).send({myPlayerList, playerList})
     
     },

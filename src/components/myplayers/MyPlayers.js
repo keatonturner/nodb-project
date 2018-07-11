@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './MyPlayers.css'
+import MyPlayer from './myplayer/MyPlayer';
 
 
 
@@ -8,9 +9,10 @@ export default class MyPlayers extends Component {
     constructor(){
         super();
         this.state={
-            myPlayerList: [],
-            search: ''
+            myPlayerList: []
+            
         }
+        this.deletePlayer = this.deletePlayer.bind(this)
     }
     handleInput(prop, val){
         this.setState({
@@ -44,11 +46,15 @@ deletePlayer(id){
 
     render(){
         let newPlayer = this.state.myPlayerList.map((e) => {
-            return <div key={e.id}>
-            <p>Name: {e.Name}</p>
-            <p>team: {e.Team}</p>
-            <button onClick={() => this.deletePlayer()}>delete</button>
-            </div>
+            console.log(e)
+            return (
+                // <div key={e.id}>
+                // <p>Name: {e.name}</p>
+                // <p>team: {e.team}</p>
+                // <button onClick={() => this.deletePlayer()}>delete</button>
+                // </div>
+                 <MyPlayer id={e.id} name={e.Name} team={e.Team} addDelete={this.deletePlayer} />
+            )
         })
         return(
             

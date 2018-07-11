@@ -3,17 +3,25 @@
    margin-right: 400px;
    background-color: white;
    border: 3px solid black;
+   padding-bottom: 50px;
 }
 button {
-    background-color: red;
+    background-color:white;
+    border: 2px solid red;
     font-size: 12px;
     padding: 5px;
     border-radius: 10px;
 }
 input {
-    border: 1px solid red;
-    padding: 5px
+    border-right: 0 solid white;
+    border-top: 0 solid white;
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    padding: 5px;
+    margin-right: 10px
+    
 }
 button:hover {
-    background-color: white;
+    background-color: red;
+    border: 1px solid black;
 }
